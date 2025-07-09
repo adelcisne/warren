@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackatón WARREN Festival</title>
+  <style>
+    /* Cuerpo con fondo y transparencia */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    /* Pseudo-elemento para imagen de fondo con 80% transparencia */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('imagen_background.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.2; /* 20% opaco = 80% transparente */
+      z-index: -1;
+    }
+    header {
+      background: #8F246C;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+  .hero img {
+  width: 100%;
+  height: 400px;         /* Altura fija de banner */
+  object-fit: cover;     /* Llena el contenedor recortando */
+  object-position: top;  /* Centra horizontalmente y alinea recorte arriba */
+  display: block;
+}
+    section {
+      padding: 1.5rem;
+      max-width: 800px;
+      margin: 1rem auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+    }
+    h2 {
+      color: #333;
+      margin-top: 0;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+    .exercise {
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #ff6f61;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hackatón WARREN Festival</h1>
+    <p>Del concepto al lanzamiento: paquetes de entregables con IA</p>
+  </header>
+  <div class="hero">
+    <img src="imagen_background.png" alt="Summer Festival Hero">
+  </div>
+
+  <section>
+    <h2>🎨 1. Portada</h2>
+    <ul>
+      <li><strong>Nombre del proyecto:</strong> <h1>WARREN FESTIVAL</h1></li>
+      <li><strong>Logo:</strong> (sube tu logo o genera un diseño provisional con IA)</li>
+      <li><strong>Equipo:</strong> Tu nombre y cargo, o nombre del equipo fundador</li>
+      <li><strong>Fecha:</strong> dd/mm/aaaa</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🌟 2. Visión y propuesta de valor</h2>
+    <p>Explica qué hace único tu festival y la experiencia diferencial que ofrecerá:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"¿Qué experiencia multisensorial premium podría ofrecer nuestro festival de verano que no exista hoy?"</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>📈 3. Oportunidad de mercado</h2>
+    <p>Incluye datos clave: crecimiento, gasto promedio, tendencias y tamaño de mercado:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Proporciona estadísticas sobre el mercado de festivales en España: crecimiento anual, gasto medio por asistente y tendencias post-pandemia."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎯 4. Problema</h2>
+    <p>Identifica las carencias de los festivales actuales:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"¿Qué problemas comunes enfrentan los asistentes a festivales de verano hoy?"</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>💡 5. Solución</h2>
+    <p>Describe tu concepto para resolver esas carencias:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Describe una solución innovadora para mejorar la experiencia de festival en términos de logística y entretenimiento."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>🏆 6. Propuesta única (USP)</h2>
+    <p>Define tu ventaja competitiva clara:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"¿Cuál sería nuestro USP para un festival de verano que combine música y realidad aumentada?"</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎵 7. Producto/Experiencia</h2>
+    <p>Detalla artistas, actividades y cronograma tentativo:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Sugiere un lineup de artistas y actividades para un festival boutique de 3 días en la playa."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>👥 8. Público objetivo</h2>
+    <p>Define el perfil de tus asistentes:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Describe el perfil demográfico y de intereses de los asistentes ideales a un festival de verano premium."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>💰 9. Modelo de negocio</h2>
+    <p>Esboza fuentes de ingreso y estructura de costes:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Proporciona un modelo de ingresos y costes para un festival de 5.000 asistentes, incluyendo entradas, patrocinio y merchandising."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>📊 10. Proyecciones financieras</h2>
+    <p>Estima ingresos, gastos y punto de equilibrio:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Calcula proyecciones financieras a 3 años para un festival con 5.000 asistentes anuales."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>🚀 11. Plan de expansión</h2>
+    <p>Define la visión a medio y largo plazo:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Elabora un plan de expansión a 5 años para internacionalizar el festival."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>👨‍👩‍👧‍👦 12. Equipo</h2>
+    <p>Presenta a los fundadores y sus fortalezas:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Resume en 3 frases la experiencia del equipo fundador en eventos y marketing."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>♻️ 13. Sostenibilidad y RSC</h2>
+    <p>Define compromisos ecológicos y sociales:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Sugiere acciones sostenibles y de responsabilidad social para nuestro festival."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>💸 14. Ronda de inversión</h2>
+    <p>Detalle de necesidades y oferta de equity:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Prepara un pitch de inversión solicitando 1 millón € para las primeras ediciones, detallando uso de fondos y equity ofrecido."</code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔚 15. Cierre / Llamada a la acción</h2>
+    <p>Invita a los stakeholders a sumarse:</p>
+    <div class="exercise">
+      <strong>Ejemplo prompt:</strong>
+      <pre><code>"Escribe una llamada a la acción convincente para invitar a inversores y partners a unirse al proyecto."</code></pre>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin-bottom: 2rem;">
+    <a href="#" class="btn">Descargar plantilla completa</a>
+  </section>
+</body>
+</html>
