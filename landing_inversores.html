@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warren Festival 2026</title>
+  <style>
+    :root {
+      --main-color: #e6007e; /* fucsia */
+      --accent-color: #ff66cc; /* rosa */
+      --text-light: #fff;
+      --bg-dark: #111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+      color: var(--main-color);
+    }
+
+    .hero {
+      background-image: url('foto1.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hero-card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 900px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero-card h1 {
+      font-size: 3rem;
+      color: var(--accent-color);
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .card-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .card h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .card button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background: var(--main-color);
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: var(--accent-color);
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 400px;
+      text-align: center;
+      color: white;
+    }
+
+    .modal-close {
+      margin-top: 1rem;
+      background: var(--accent-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-card h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <section class="hero">
+    <div class="hero-card">
+      <h1>Warren Festival 2026</h1>
+    </div>
+  </section>
+
+  <section class="cards-container">
+    <div class="card" style="background-image: url('foto2.jpg')">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <h2>Inversores</h2>
+        <button onclick="openModal('Inversores')">Inversores</button>
+      </div>
+    </div>
+    <div class="card" style="background-image: url('foto3.jpg')">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <h2>Prensa</h2>
+        <button onclick="openModal('Prensa')">Prensa</button>
+      </div>
+    </div>
+    <div class="card" style="background-image: url('foto4.jpg')">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <h2>Patrocinadores</h2>
+        <button onclick="openModal('Patrocinadores')">Patrocinadores</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 id="modal-title">Título</h2>
+      <p>Contenido del modal para esta sección. Puedes personalizarlo más adelante.</p>
+      <button class="modal-close" onclick="closeModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Cerrar con tecla Escape
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
